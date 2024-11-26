@@ -10,6 +10,9 @@ use App\Models\Product;
 
 class Transaction_detail extends Model
 {
+    protected $table = 'transaction_details';
+    protected $primarykey = 'id_detail_transaksi';
+    protected $fillable = ['qty', 'harga'];
     public function Transaction(): BelongsTo
     {
         return $this->belongsTo(Transaction::class, 'id_transaksi', 'id_transaksi');

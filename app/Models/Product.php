@@ -10,6 +10,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
+    protected $table = 'products';
+    protected $primarykey = 'id_barang';
+    protected $fillable = ['nama', 'harga', 'stok','id_satuan'];
+    
     public function Measurement(): BelongsTo
     {
         return $this->belongsTo(Measurement::class, 'id_satuan', 'id_satuan');
