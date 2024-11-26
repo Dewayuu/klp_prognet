@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id('id_transaksi');
+            $table->foreignId('id_pelanggan')->constrained();
             $table->date('tanggal');
             $table->decimal('total');
             $table->timestamps();

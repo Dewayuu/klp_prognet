@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id('id_barang');
+            $table->foreignID('id_satuan')->constrained();
             $table->string('kode');  // Menggunakan string untuk kode (varchar)
             $table->string('nama');  // Menggunakan string untuk nama produk
             $table->decimal('harga', 8, 2);  // Menggunakan decimal untuk harga (8 digit total, 2 di desimal)

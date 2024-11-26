@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('transaction_details', function (Blueprint $table) {
             $table->id('id_detail_transaksi');
+            $table->foreignId('id_transaksi');
+            $table->foreignId('id_barang');
             $table->decimal('qty', 5, 3);
             $table->decimal('harga');
             $table->timestamps();

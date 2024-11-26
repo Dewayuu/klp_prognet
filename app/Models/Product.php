@@ -3,8 +3,20 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Measurement;
+use App\Models\Transaction_detail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
-    //
+    public function Measurement(): BelongsTo
+    {
+        return $this->belongsTo(Measurement::class, 'id_satuan', 'id_satuan');
+    }
+    
+    public function Transaction_detail(): HasMany
+    {
+        return $this->hasMany(Transaction_detail::class, 'id_detail_transaksi', 'id_detail_transaksi');
+    }
 }
