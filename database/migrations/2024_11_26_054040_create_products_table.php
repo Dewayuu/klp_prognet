@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_barang');
             $table->string('kode');  // Menggunakan string untuk kode (varchar)
             $table->string('nama');  // Menggunakan string untuk nama produk
             $table->decimal('harga', 8, 2);  // Menggunakan decimal untuk harga (8 digit total, 2 di desimal)
