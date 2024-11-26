@@ -21,6 +21,6 @@ class Product extends Model
     
     public function Transaction_detail(): HasMany
     {
-        return $this->hasMany(Transaction_detail::class, 'id_detail_transaksi', 'id_detail_transaksi');
+        return $this->hasMany(Transaction_detail::class, 'id_barang', 'id_barang');
     }
 }

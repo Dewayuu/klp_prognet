@@ -19,6 +19,6 @@ class Transaction_detail extends Model
     }
     
     public function Product(): HasMany{
-        return $this->hasMany(Product::class, 'id_produk', 'id_produk');
+        return $this->hasMany(Product::class, 'id_barang', 'id_barang');
     }
 }

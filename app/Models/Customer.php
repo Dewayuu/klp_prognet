@@ -14,6 +14,6 @@ class Customer extends Model
 
     public function Measurement(): HasMany
     {
-        return $this->hasMany(Transaction::class, 'id_transaksi','id_transaksi');
+        return $this->hasMany(Transaction::class, 'id_pelanggan','id_pelanggan');
     }
 }

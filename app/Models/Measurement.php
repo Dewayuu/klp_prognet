@@ -14,6 +14,6 @@ class Measurement extends Model
     
     public function Product(): HasMany
     {
-        return $this->hasMany(Product::class, 'id_barang','id_barang');
+        return $this->hasMany(Product::class, 'id_satuan','id_satuan');
     }
 }

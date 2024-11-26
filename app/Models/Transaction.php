@@ -10,7 +10,7 @@ class Transaction extends Model
 {
     protected $table = 'transactions';
     protected $primarykey = 'id_transaksi';
-    protected $fillable = ['total', 'harga', 'tanggal'];
+    protected $fillable = ['total', 'harga', 'tanggal', 'id_pelanggan'];
     
     public function customer(): BelongsTo
     {
