@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('id_satuan');
             $table->string('nama_satuan',255);
             $table->timestamps();
+
+            $table->primary('id_satuan');
         });
     }
 

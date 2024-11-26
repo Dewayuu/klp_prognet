@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('alamat',255);
             $table->string('telepon',30);
             $table->timestamps();
+
+            $table->primary('id_pelanggan');
         });
     }
 
