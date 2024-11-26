@@ -32,7 +32,7 @@
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white {{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300' }}" aria-current="page">Home</a>
-            <a href="contacts" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white {{ request()->is('contacts') ? 'bg-gray-900 text-white' : 'text-gray-300' }}">Contacts</a>
+            <a href="customers" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white {{ request()->is('customers') ? 'bg-gray-900 text-white' : 'text-gray-300' }}">Customers</a>
             <a href="about" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white {{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300' }}">About</a>
             <a href="products" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white {{ request()->is('products') ? 'bg-gray-900 text-white' : 'text-gray-300' }}">Products</a>
             <a href="transactions" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white {{ request()->is('transactions') ? 'bg-gray-900 text-white' : 'text-gray-300' }}">Transactions</a>

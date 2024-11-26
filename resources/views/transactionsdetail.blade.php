@@ -18,7 +18,7 @@
                 <tr style="background-color: #ecf0f1;">
                     <td style="padding: 12px 16px; text-align: center;">{{ $transaksi['id_transaksi'] }}</td>
                     <td style="padding: 12px 16px; text-align: left;">{{ $transaksi['tanggal'] }}</td>
-                    <td style="padding: 12px 16px; text-align: left;">{{ $pelanggan['nama'] }}</td>
+                    <td style="padding: 12px 16px; text-align: left;">{{ $transaksi['nama'] }}</td>
                     <td style="padding: 12px 16px; text-align: left;">{{ $transaksi['total'] }}</td>
                     <td style="padding: 12px 16px; text-align: center; display: flex; justify-content: center; gap: 15px;">
                         <!-- Tombol Edit -->
@@ -38,7 +38,6 @@
                             </button>
                         </form>
                 </tr>
-                @endforeach
             </tbody>
         </table>
         <!-- Tombol Tambah Produk -->
