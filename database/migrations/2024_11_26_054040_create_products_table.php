@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_satuan');
             $table->string('kode');  // Menggunakan string untuk kode (varchar)
             $table->string('nama');  // Menggunakan string untuk nama produk
-            $table->decimal('harga', 8, 2);  // Menggunakan decimal untuk harga (8 digit total, 2 di desimal)
+            $table->decimal('harga', 65, 2);  // Menggunakan decimal untuk harga (8 digit total, 2 di desimal)
             $table->integer('stok');  // Menggunakan integer untuk stok
             $table->timestamps();
 

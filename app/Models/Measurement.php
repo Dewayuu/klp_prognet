@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Measurement extends Model
 {
     protected $table = 'measurements';
-    protected $primarykey = 'id_satuan';
-    protected $fillable = ['satuan'];
+    protected $primaryKey = 'id_satuan';
+    protected $fillable = ['nama_satuan'];
     
     public function Product(): HasMany
     {
