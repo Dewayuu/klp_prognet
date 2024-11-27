@@ -40,10 +40,17 @@
             </div>
         </div>
 
+        <button type="button" onclick="location.href='{{ route('transactions.index') }}'"
+            style="padding: 10px 20px; font-size: 14px; border: none; border-radius: 4px; background-color: #95a5a6; color: white; cursor: pointer; transition: background-color 0.3s ease;"
+            onmouseover="this.style.backgroundColor='#7f8c8d';"
+            onmouseout="this.style.backgroundColor='#95a5a6';">
+            Kembali
+        </button>
         <button type="button" id="add-detail" class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">Tambah Detail Produk</button>
 
-        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-    </form>
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
+        
+        </form>
 
     <script>
         document.getElementById('add-detail').addEventListener('click', function() {

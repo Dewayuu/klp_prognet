@@ -36,8 +36,21 @@
             </select>
             <label for="id_satuan" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Satuan</label>
         </div>
-
-        <!-- Submit Button -->
-        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+        <!-- Tombol Submit -->
+        <div style="display: flex; justify-content: space-between;">
+                    <button type="button" onclick="location.href='{{ route('products.index') }}'"
+                        style="padding: 10px 20px; font-size: 14px; border: none; border-radius: 4px; background-color: #95a5a6; color: white; cursor: pointer; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#7f8c8d';"
+                        onmouseout="this.style.backgroundColor='#95a5a6';">
+                        Kembali
+                    </button>
+                    
+                    <button type="submit"
+                        style="padding: 10px 20px; font-size: 14px; border: none; border-radius: 4px; background-color: #3498db; color: white; cursor: pointer; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#2980b9';"
+                        onmouseout="this.style.backgroundColor='#3498db';">
+                        Simpan
+                    </button>
+        </div>
     </form>
 </x-layout>
