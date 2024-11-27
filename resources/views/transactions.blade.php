@@ -18,17 +18,21 @@
                 <tr style="background-color: #ecf0f1;">
                     <td style="padding: 12px 16px; text-align: center;">{{ $transaksi['id_transaksi'] }}</td>
                     <td style="padding: 12px 16px; text-align: left;">{{ $transaksi['tanggal'] }}</td>
-                    <td style="padding: 12px 16px; text-align: left;">{{ $pelanggan['nama'] }}</td>
+                    <td style="padding: 12px 16px; text-align: left;">{{ $transaksi->customer->nama }}</td>
                     <td style="padding: 12px 16px; text-align: left;">{{ $transaksi['total'] }}</td>
                     <td style="padding: 12px 16px; text-align: center; display: flex; justify-content: center; gap: 15px;">
-                        <!-- Tombol Edit -->
-                        <button style="padding: 8px 12px; font-size: 14px; border: none; border-radius: 4px; cursor: pointer; background-color: #3498db; color: white; transition: background-color 0.3s ease;"
-                            onmouseover="this.style.backgroundColor='#2980b9';" 
-                            onmouseout="this.style.backgroundColor='#3498db';">
-                            View Details
-                        </button>
+                        <!-- Tombol View Details -->
+                        <a href="{{ route('transactions.show', $transaksi->id_transaksi) }}" 
+                        style="text-decoration: none;">
+                            <button style="padding: 8px 12px; font-size: 14px; border: none; border-radius: 4px; cursor: pointer; background-color: #3498db; color: white; transition: background-color 0.3s ease;"
+                                onmouseover="this.style.backgroundColor='#2980b9';" 
+                                onmouseout="this.style.backgroundColor='#3498db';">
+                                View Details
+                            </button>
+                        </a>
+
                         <!-- Form Delete -->
-                        <form method="POST">
+                        <form action="{{ route('transactions.destroy', $transaksi->id_transaksi) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" style="padding: 8px 12px; font-size: 14px; border: none; border-radius: 4px; cursor: pointer; background-color: #e74c3c; color: white; transition: background-color 0.3s ease;"
@@ -37,13 +41,14 @@
                                 Delete
                             </button>
                         </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
         <!-- Tombol Tambah Produk -->
             <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
-                <button style="padding: 10px 20px; font-size: 14px; border: none; border-radius: 4px; background-color: #3498db; color: white; cursor: pointer; transition: background-color 0.3s ease;"
+                <button onclick="location.href='{{ route('transactions.create') }}'" style="padding: 10px 20px; font-size: 14px; border: none; border-radius: 4px; background-color: #3498db; color: white; cursor: pointer; transition: background-color 0.3s ease;"
                     onmouseover="this.style.backgroundColor='#2980b9';" 
                     onmouseout="this.style.backgroundColor='#3498db';">
                     Tambah Transaksi

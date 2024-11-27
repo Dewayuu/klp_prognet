@@ -18,7 +18,7 @@ class Transaction_detail extends Model
         return $this->belongsTo(Transaction::class, 'id_transaksi', 'id_transaksi');
     }
     
-    public function Product(): HasMany{
-        return $this->hasMany(Product::class, 'id_barang', 'id_barang');
+    public function Product(): BelongsTo{
+        return $this->BelongsTo(Product::class, 'id_barang', 'id_barang');
     }
 }

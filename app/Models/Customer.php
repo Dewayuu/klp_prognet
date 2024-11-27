@@ -12,7 +12,7 @@ class Customer extends Model
     protected $primaryKey = 'id_pelanggan'; // Wajib jika primary key bukan 'id'
     protected $fillable = ['nama', 'alamat', 'telepon'];
 
-    public function Measurement(): HasMany
+    public function transaction(): HasMany
     {
         return $this->hasMany(Transaction::class, 'id_pelanggan','id_pelanggan');
     }
